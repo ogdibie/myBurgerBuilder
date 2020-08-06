@@ -18,7 +18,14 @@ const BuildControls = (props) => {
       disabled={props.disabledButtons[control.type]}
     />
   ));
-  return <div className={classes.BuildControls}>{bldControls}</div>;
+  return (
+    <div className={classes.BuildControls}>
+      <p>
+        Current Price : <strong>{props.price.toFixed(2)}</strong>
+      </p>
+      {bldControls}
+    </div>
+  );
 };
 
 export default BuildControls;
