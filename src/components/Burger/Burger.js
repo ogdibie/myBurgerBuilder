@@ -4,9 +4,13 @@ import classes from "./Burger.module.css";
 const Burger = ({ ingredients }) => {
   let transformedIngredients = Object.keys(ingredients)
     .map((ingredient) => {
-      return [...Array(ingredients[ingredient])].map((_, index) => (
-        <BurgerIngredient key={ingredient + index} type={ingredient} />
-      ));
+      const burgerIngredients = [];
+      for (let index = 0; index < ingredients[ingredient]; index++) {
+        burgerIngredients.push(
+          <BurgerIngredient key={ingredient + index} type={ingredient} />
+        );
+      }
+      return burgerIngredients;
     })
     .reduce((arr, el) => arr.concat(el), []);
 
