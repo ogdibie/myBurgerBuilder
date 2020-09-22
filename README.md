@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a basic app for a user to select ingredients for a burger and order the burger. For now, I am just sending the post request to a firebase database with a information about the order. Still need some more clean up but this was just me having some fun with react.
 
 ## Available Scripts
 
